@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Health Insurance Cost Prediction</title>
+</head>
+<body ><h1 h1 style="color:blue" style="font-size:40px;font-style:bold "><CENTER> HEALTH INSURANCE COST PREDICTION </CENTER> </h1>
+
+<p  style="color:black;font-size:18px;font-style:bold ;text-align:center margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 350px;
+  margin-left: 80px;">Health insurance or medical insurance is a type of insurance that covers the whole or a part of the risk of a person incurring medical expenses.
+    As with other types of insurance is risk among many individuals. By estimating the overall risk of health risk and health system expenses over the risk pool, an insurer can develop a routine finance structure,
+    such as a monthly premium or payroll tax, to provide the money to pay for the health care benefits specified in the insurance
+    agreement.The benefit is administered by a central organization, such as a government agency, private business, or not-for-profit entity.
+
+</p>
+<form action="{{url_for('.predict')}}" method="post">
+<CENTER>
+    <p style="color:red;font-size:25px;font-style:bold ;"> Fill details to predict health insurance premium cost</p>
+    <table>
+
+       <tr>
+            <td style="color:Black;font-size:22px;font-style:bold ;"> Age(Enter your age) </td>
+            <td> <input type='number' name='uage' ></td>
+        </tr>
+
+        <tr>
+            <td style="color:Black;font-size:22px;font-style:bold ;"> Sex(Male:0 Female:1) </td>
+            <td> <input type='number' name='usex'></td>
+        </tr>
+
+        <tr>
+            <td style="color:Black;font-size:22px;font-style:bold ;"> Children(no. of children) </td>
+            <td> <input type='number' name='uchildren'></td>
+        </tr>
+
+        <tr>
+            <td style="color:Black;font-size:22px;font-style:bold ;"> Smoker(No:0 Yes:1) </td>
+            <td> <input type='number' name='usmoker'></td>
+        </tr>
+        <tr>
+            <td style="color:Black;font-size:22px;font-style:bold ;"> bmi(ideal bmi for adults 18.5 to 24.9) </td>
+            <td> <input type='number' step="any" name='uobese'></td>
+        </tr>
+        <tr>
+            <td>  <button type="submit" style="color:black;font-size:18px;font-style:bold ;background-color: #f44336">Predict</button></tr> </td>
+        </tr>
+
+    </table>
+</CENTER>
+</form>
+<center> {{prediction_text}}</center>
+
+</body>
+</html>
